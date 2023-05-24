@@ -10,7 +10,6 @@ const Cart = (props) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [didSubmit, setDidSubmit] = useState(false);
   const [checkout, setCheckout] = useState(false);
-  const [confirmOrder, setConfirmOrder] = useState(false);
   const cartCtx = useContext(CartContext);
 
   const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
