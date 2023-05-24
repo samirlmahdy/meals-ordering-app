@@ -72,7 +72,7 @@ const Cart = (props) => {
     </div>
     {hasItems && <Checkout onCancel={props.onClose} onConfirm={orderConfirmHandler} />}
     {checkout && <div className={classes.actions}>
-      <button className={classes['button--alt']} onClick={props.onClose}>
+      <button className={classes['button--alt']} onClick={cancelCheckoutHandler}>
         Close
         </button>
       {hasItems && <button className={classes.button} onClick={orderHandler} >Order</button>}
