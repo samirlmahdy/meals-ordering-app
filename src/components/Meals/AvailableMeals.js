@@ -15,7 +15,9 @@ const AvailableMeals = () => {
   useEffect(() => {
 
     const fetchMeals = async () => {
-      const response = await fetch("https://react-http-6b23a-default-rtdb.firebaseio.com/meals.json")
+      const response = await fetch("https://react-http-6b23a-default-rtdb.firebaseio.com/meals.json",{
+        headers:('Access-Control-Allow-Origin', 'https://meals-ashy.vercel.app')
+      })
       if (!response.ok) {
         throw new Error('Something went wrong!')
       }
